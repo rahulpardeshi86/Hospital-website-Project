@@ -1,0 +1,982 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --maincolor: #2ec8a6;
+    --secondcolor: #f8a803;
+    --thirdcolor: #f4ab01;
+    --textcolor: #4a5764;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: "Inter" sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    width: 100%;
+    box-shadow: 0 4px 45px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    background-color: rgb(245, 243, 243);
+}
+
+.logo {
+    width: 150px;
+}
+
+.logo.img {
+    width: 100%;
+}
+
+.logo a {
+    text-decoration: none;
+    margin-left: 15px;
+    font-style: italic;
+    font-weight: 700;
+    color: #141715;
+}
+
+.navbar a {
+    color: var(--textcolor);
+    font-size: 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    font-family: "Playfair Display", serif;
+    transition: color 0.4s ease;
+
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background-color: var(--maincolor);
+    transition: 0.4s;
+}
+
+.navbar a:hover {
+    color: var(--maincolor);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#menu-bars {
+    color: var(--textcolor);
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: none;
+}
+
+#menu-bars:hover {
+    color: var(--maincolor);
+}
+
+.right-icons .btn a:hover {
+    background-color: var(--textcolor);
+}
+
+.right-icons .btn a {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #faf5f5 !important;
+    color: var(--textcolor);
+    text-decoration: none;
+    background-color: var(--maincolor);
+}
+
+/* Home section started */
+.main-home {
+    padding: 2rem 7%;
+    background-image: url(Images/blur-hospital.jpg);
+    width: 100%;
+    min-height: 88vh;
+    /* height: 100%; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0rem;
+
+
+}
+
+/* Home Button */
+.home-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+
+.home-btn a {
+    display: block;
+    padding: 1.5rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--maincolor);
+
+}
+
+.homebtnsec {
+    background: transparent !important;
+    color: var(--textcolor) !important;
+    border: 1px solid var(--maincolor);
+}
+
+.home-btn a:hover {
+    padding: 1.5rem;
+
+}
+
+.home {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.home .home-left-content span {
+    font-size: 2.5rem;
+    color: var(--maincolor);
+    padding: 1rem 0;
+    font-weight: bolder;
+}
+
+.home .home-left-content h2 {
+    font-size: 35px;
+    color: #141715;
+}
+
+.home .home-left-content p {
+    font-size: 1.8rem;
+    color: #141715;
+
+}
+
+.home .home-left-content {
+    flex: 1 1 40rem;
+    color: aliceblue;
+}
+.technology {
+    padding: 2rem 7%;
+}
+
+.main-technology {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+}
+
+.inner-technology {
+    flex: 1 1 300px;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 45px rgba(0, 0, 0, 0.15);
+    background-image: url("Images/card\ bg\ img.jpg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.inner-technology::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--maincolor);
+    opacity: 0;
+    transition: 0.5s linear;
+    z-index: 1;
+
+}
+
+.inner-technology:hover::after {
+    opacity: 0.85;
+
+}
+
+.inner-technology:hover {
+    transform: scale(1.08);
+}
+
+.inner-technology * {
+    position: relative;
+    z-index: 2;
+}
+
+.inner-technology:hover i {
+    color: #fff;
+    transform: scale(1.08);
+}
+
+.inner-technology:hover h2 {
+    color: #fff;
+}
+
+.inner-technology:hover p {
+    color: #fff;
+}
+
+
+
+.main-technology i {
+    font-size: 40px;
+    color: var(--maincolor);
+}
+
+.inner-technology h2 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+
+}
+
+.inner-technology p {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+/* About us section started */
+.main-about {
+    padding: 2rem 7%;
+    width: 100%;
+    min-height: 88vh;
+    background-image: url(Images/card\ bg\ img.jpg.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inner-main-about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10rem;
+}
+
+.about-inner-content {
+    flex: 1 1 45rem;
+}
+.about-inner-content img {
+
+    width: 100%;
+    box-shadow: 0 4px 45px rgba(0, 0, 0, 0.15);
+
+    border-radius: 4px;
+}
+
+.about-right-content h2 {
+    font-size: 30px;
+    padding: 1.5rem 0;
+    color: var(--textcolor);
+}
+
+.about-right-content p {
+    font-size: 1.7rem;
+    padding: 1.5rem 0;
+    color: var(--textcolor);
+}
+
+.aboutsec-content {
+    line-height: 3rem !important;
+}
+
+/* Our Doctors */
+.main-doctors {
+    padding: 2rem 7%;
+    background-image: url(Images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.doctors-heding {
+    font-size: 30px;
+    text-align: center;
+    margin: 3rem;
+
+}
+
+.doc-poster {
+    position: relative;
+    overflow: visible;
+}
+
+.main-inner-doctors {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.doc-poster {
+    flex: 1 1 300px;
+}
+
+.doc-poster img {
+    padding: 1rem;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    background-color: var(--maincolor);
+}
+
+.doc-icons {
+    position: absolute;
+    text-align: center;
+}
+
+.doc-icons i {
+    font-size: 3rem;
+    margin: 0.5rem;
+    color: rgb(114, 200, 178);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.doc-icons i:hover {
+    color: var(--secondcolor);
+}
+
+.doc-poster::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #a3a3a3, transparent);
+    z-index: 1;
+
+}
+
+.doc-poster:hover:after {
+    bottom: -100;
+    height: 25%;
+    transition: 0.5s;
+
+}
+
+.doc-details {
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    bottom: 0;
+    left: 32.5%;
+
+}
+
+.doc-details h2 {
+    color: #333;
+    font-size: 25px;
+
+}
+
+.doc-details i {
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: var(--maincolor);
+    cursor: pointer;
+}
+
+.doc-details i:hover {
+    color: var(--secondcolor);
+    transform: scale(1.2);
+}
+
+.our-service {
+    width: 100%;
+    padding: 3rem 7%;
+}
+
+.service-heading {
+    font-size: 40px;
+    color: var(--maincolor);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.main-services {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    text-align: center;
+}
+
+.inner-services {
+    flex: 1 1 300px;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2)0px 2px 8px 0px;
+}
+
+.service-icon i {
+    font-size: 3rem;
+    color: var(--maincolor);
+    padding: 1rem;
+    text-align: center;
+}
+
+.inner-services:hover {
+    transform: translateY(-10px);
+    border-bottom: 2px solid var(--maincolor);
+}
+
+.service-icon {
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px solid var(--maincolor);
+}
+
+.inner-services h3 {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+
+.inner-services p {
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    line-height: 2.5rem;
+}
+
+/* custemer review */
+.main-review {
+    padding: 2.5rem 7%;
+    width: 100%;
+}
+
+.review-heading {
+    text-align: center;
+
+
+}
+
+.review-heading h1 {
+    font-size: 40px;
+    color: var(--maincolor);
+    padding-bottom: 3rem;
+
+}
+
+.review-inner-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+    text-align: center;
+}
+
+.review-box {
+    flex: 1 1 300px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35)0px 5px 15px;
+}
+
+.review-box img {
+    border-radius: 100%;
+    width: 150px;
+    border: 2px solid var(--maincolor);
+    height: 150px;
+}
+
+.review-stars {
+    padding: 1rem 0;
+}
+
+.review-stars i {
+    font-size: 1.5rem;
+    color: var(--secondcolor);
+}
+
+.review-box h2 {
+    font-size: 1.7rem;
+    padding-top: 2rem;
+}
+
+.review-box p {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    padding-bottom: 2rem;
+}
+
+/* footer section */
+.footer {
+    background-image: url(Images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+    padding: 4rem 2rem;
+    color: var(--textcolor);
+    margin-top: 5rem;
+    position: relative;
+    border-top: 3px solid var(--maincolor);
+    box-shadow: 0px -10px 25px rgba(0, 0, 0, 0.5);
+
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.footer-top h2 {
+    color: var(--textcolor);
+    font-size: 2.8rem;
+    margin-bottom: .7rem;
+}
+
+.footer-top p {
+    font-size: 1.5rem;
+    color: #ddd;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 3rem;
+}
+
+.footer-box h3 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    color: var(--textcolor);
+}
+
+.footer-box p {
+    color: var(--textcolor);
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin: .8rem 0;
+}
+
+.footer-box ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-box ul li a:hover {
+    color: var(--secondcolor);
+    padding-left: 6px;
+}
+
+.social a {
+    font-size: 2.3rem;
+    margin-right: 1rem;
+    color: #fff;
+    transition: .3s;
+}
+
+.social a:hover {
+    color: #2ec8a6;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1.5px solid #444;
+}
+
+.footer-bottom p {
+    color: #FFF;
+    font-size: 1.8rem;
+}
+
+@media(max-width:768px) {
+    html {
+        font-size: 55%;
+    }
+
+    .right-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-bars {
+        display: initial;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 2rem;
+        padding: 1rem;
+        border: 1px solid var(--textcolor);
+        background-color:var(--secondcolor);
+
+    }
+    .main-home {
+        margin-top: 50px;
+        height: 40vh;
+        width: 100%;
+
+    }
+    .home-right-content img{
+        position: relative;
+        /* left: 80%; */
+    }
+
+    .about-right-content h2 {
+        font-size: 20px;
+
+    }
+
+    .main-inner-doctors {
+        gap: 1.5rem;
+    }
+
+    .doc-poster {
+        flex: 1 1 100%;
+        max-width: 100%;
+        /* font-size: 3.5rem; */
+    }
+
+    .doc-poster img {
+        height:700px;
+    }
+
+
+    .contact-form {
+        max-width: 60%;
+        margin: auto;
+        padding: 2.5rem;
+        border-radius: 0.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.3rem;
+        padding: 0.8rem;
+    }
+
+    .contact-form h3 {
+        font-size: 1.7rem;
+    }
+
+    .contact-form button {
+        font-size: 1.4rem;
+        padding: 0.9rem;
+    }
+
+
+
+
+
+
+    
+}
+
+
+/* Book Doctor Appointment */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    background-image: url(Images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg);
+    background-size: cover;
+    background-size: contain;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.container-appointement {
+    max-width: 600px;
+    margin: 40px auto;
+    background: "";
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-text h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--textcolor);
+}
+
+.container-text label {
+    display: block;
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+    color: #444;
+}
+
+.container-text input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.container-text textarea {
+    height: 100px;
+}
+
+.container-text button {
+    width: 100%;
+    padding: 12px;
+    background: var(--maincolor);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.submit button:hover {
+    background: var(--thirdcolor);
+}
+
+.container-text input,
+select,
+textarea :hover {
+    color: var(--textcolor);
+}
+
+.appointement-btn-back {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 18px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: var(--maincolor);
+    font-size: 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.appointement-btn-back:hover {
+    background: var(--secondcolor);
+    transform: scale(1.08);
+
+}
+
+.contact {
+    padding: 5rem 2rem;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #0c0f12;
+}
+
+.contact-sub {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    color: #555;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.contact-form h3 {
+    margin-bottom: 1rem;
+    color: #2ec8a6;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.3rem;
+    border: 1.5px solid #ccc;
+    border-radius: .6rem;
+    font-size: 1.5rem;
+    transition: .3s;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #333;
+    border-color: #2ec8a6;
+    box-shadow: 0px 0px 8px rgba(46, 200, 166, 0.3);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: none;
+    color: #fff;
+    background: #2ec8a6;
+    border-radius: .6rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact-form button:hover {
+    background: #22b192;
+}
+
+.contact-info h3 {
+    color: #2ec8a6;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1.5rem;
+    margin: .7rem 0;
+}
+
+.contact-info i {
+    color: #2ec8a6;
+    margin-right: .8rem;
+}
+
+
+
+.contact-social a {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #0c0f12;
+    transition: .3s;
+}
+
+.contact-info {
+    margin-left: 35%;
+}
+
+.contact-social a:hover {
+    color: #2ec8a6;
+    transform: translateY(-3px);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 10px 18px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: var(--maincolor);
+    font-size: 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background: var(--secondcolor);
+    transform: scale(1.08);
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}

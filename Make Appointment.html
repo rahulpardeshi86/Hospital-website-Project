@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <a id="appointement-btn-back" href="index.html">Book Now</a> -->
+    <a href="index.html" class="appointement-btn-back">← Back</a>
+    <div class="container-appointement">
+        <h2>Book Doctor Appointment</h2>
+        <form>
+            <div class="container-text">
+
+
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+
+                <label>Select Doctor</label>
+                <select required>
+                    <option value="">-- Choose Doctor --</option>
+                    <option>Dr. Aakash Singh – Cardiologist</option>
+                    <option>Dr. Priya Sharma – Dermatologist</option>
+                    <option>Dr. Neeraj Patil – Neurologist</option>
+                    <option>Dr. Kavita Joshi – Gynecologist</option>
+                </select>
+
+                <label>Appointment Date</label>
+                <input type="date" required>
+
+                <label>Appointment Time</label>
+                <input type="time" required>
+
+                <label>Describe Your Problem</label>
+                <textarea placeholder="Write your symptoms or issue..."></textarea>
+                <div class="submit">
+
+
+                    <button type="submit">Book Appointment</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.querySelector('input[type="text"]').value;
+            const email = document.querySelector('input[type="email"]').value;
+            const phone = document.querySelector('input[type="tel"]').value;
+            const doctor = document.querySelector('select').value;
+            const date = document.querySelector('input[type="date"]').value;
+            const time = document.querySelector('input[type="time"]').value;
+            const problem = document.querySelector('textarea').value;
+
+            if (!doctor) {
+                alert("Please select a doctor");
+                return;
+            }
+
+            alert(
+                "Appointment Booked Successfully!"
+                +
+                "Name: " + name +
+                "Email: " + email +
+                "Phone: " + phone +
+                "Doctor: " + doctor +
+                "Date: " + date +
+                "Time: " + time +
+                "Problem: " + problem
+            );
+        });
+    </script>
+</body>
+
+</html>

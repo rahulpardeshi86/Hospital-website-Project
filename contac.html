@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="contact" id="contact">
+
+        <h2 class="contact-title">Contact Us</h2>
+        <p class="contact-sub">We are here to help you 24/7. Feel free to reach out anytime.</p>
+        <a href="index.html" class="back-btn">← Back</a>
+
+
+        <div class="contact-container">
+
+            <!-- Contact Form (Top & Center) -->
+            <form class="contact-form">
+                <h3>Send Message</h3>
+
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" autocapitalize="off" autocomplete="email" required>
+                <input type="number" placeholder="Phone Number" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <!-- Get in Touch (Bottom) -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+
+                <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</p>
+                <p><i class="fa-solid fa-link"></i></i> https://maps.app.goo.gl/PWLuur7vAWEk6o6E9</p>
+
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> info@healthcare.com</p>
+                <p><i class="fa-solid fa-clock"></i> Open 24/7</p>
+
+                <div class="contact-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+    <script>
+        document.querySelector(".contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            alert("Successfully Submitted!");
+
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
