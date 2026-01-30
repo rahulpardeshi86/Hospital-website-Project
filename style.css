@@ -7,7 +7,6 @@
     --thirdcolor: #f4ab01;
     --textcolor: #4a5764;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -45,7 +44,6 @@ header {
     z-index: 1000;
     background-color: rgb(245, 243, 243);
 }
-
 .logo {
     width: 150px;
 }
